@@ -1,12 +1,12 @@
-FROM php:5.6-apache
+FROM php:7.2-apache
 
 # Package installs
-RUN apt-get update && apt-get install -y unzip php5-gmp php5-mcrypt libxml2 libcurl4-openssl-dev libgmp-dev libgd-dev libc-client-dev libkrb5-dev libmcrypt-dev && rm -r /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y unzip php7.0-gmp php7.0-mcrypt libxml2 libcurl4-openssl-dev libgmp-dev libgd-dev libc-client-dev libkrb5-dev libmcrypt-dev && rm -r /var/lib/apt/lists/*
 
 RUN ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h
 
 # PECL installs
-RUN pecl install mailparse-2.1.6
+RUN pecl install mailparse-3.0.2
 
 # Enabling any extensions like from above (along with other Dockerizing of PHP stuff)
 RUN docker-php-ext-configure imap --with-kerberos --with-imap-ssl
@@ -17,9 +17,9 @@ RUN apt-get clean
 
 # Download the version of Blesta and unzip it, then remove the zip file
 RUN cd /tmp \
-    && curl -s -O https://account.blesta.com/client/plugin/download_manager/client_main/download/91/blesta-4.0.0.zip \
-    && unzip -qq blesta-4.0.0.zip \
-    && rm blesta-4.0.0.zip \
+    && curl -s -O https://account.blesta.com/client/plugin/download_manager/client_main/download/119/blesta-4.4.0.zip \
+    && unzip -qq blesta-4.4.0.zip \
+    && rm blesta-4.4.0.zip \
     && mv uploads /var/www \
     && mv blesta/* blesta/.h* /var/www/html
 
