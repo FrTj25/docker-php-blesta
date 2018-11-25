@@ -12,7 +12,8 @@ RUN ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h
 RUN pecl install mailparse-3.0.2
 
 # Enabling any extensions like from above (along with other Dockerizing of PHP stuff)
-RUN docker-php-ext-configure gmp imap --with-kerberos --with-imap-ssl
+RUN docker-php-ext-configure imap --with-kerberos --with-imap-ssl
+RUN docker-php-ext-configure gmp
 RUN docker-php-ext-enable mailparse
 RUN docker-php-ext-install pdo pdo_mysql curl imap gmp mbstring mcrypt gd
 
