@@ -2,6 +2,11 @@
 
 A Docker for [Blesta](https://www.blesta.com).
 
+# IMPORTANT NOTE
+Original from https://github.com/eric-hansen/docker-php-blesta
+Forked and changed for own use.
+Namely made changes: Updated downloaded Blesta.ZIP to 4.4.0 and change to php:7.2-apache
+
 ## How To Use
 
 * Install [Docker](https://www.docker.com) for your system
