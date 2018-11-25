@@ -33,7 +33,7 @@ RUN chown -R www-data: /var/www/html
 RUN cd /tmp \
     && curl -s -o ioncube.tar.gz http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz \
     && tar -zxf ioncube.tar.gz \
-    && mv ioncube/ioncube_loader_lin_5.6.so /usr/local/lib/php/extensions/* \
+    && mv ioncube/ioncube_loader_lin_7.2.so /usr/local/lib/php/extensions/* \
     && rm -Rf ioncube.tar.gz ioncube \
     && echo "zend_extension=ioncube_loader_lin_5.6.so" > /usr/local/etc/php/conf.d/00_docker-php-ext-ioncube.ini
 
