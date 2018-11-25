@@ -2,10 +2,10 @@
 
 A Docker for [Blesta](https://www.blesta.com).
 
-# IMPORTANT NOTE
+# IMPORTANT NOTE - Image not Tested - NO WARRANTY
 * Original from https://github.com/eric-hansen/docker-php-blesta
 * Forked and changed for own use.
-* Namely made changes: Updated downloaded Blesta.ZIP to 4.4.0, image changed to php:7.2-apache, use PHP 7 AddOns and newer mailparse.
+* Namely made changes: Updated downloaded Blesta.ZIP to 4.4.0, image changed to php:7.2-apache, use PHP 7 AddOns (and remove mcrypt) and newer mailparse. Configure PHP7.2 with gmp instead of install via php7.0-gmp
 
 ## How To Use
 
