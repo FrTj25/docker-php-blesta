@@ -7,6 +7,10 @@ A Docker for [Blesta](https://www.blesta.com).
 * Forked and changed for own use.
 * Namely made changes: Updated downloaded Blesta.ZIP to 4.4.0, image changed to php:7.2-apache, use PHP 7 AddOns (and remove mcrypt) and newer mailparse. Configure PHP7.2 with gmp instead of install via php7.0-gmp
 
+## Blesta 4.4.0 doesn't support PHP 7.2
+** Blesta doesn't run at this Dockerfile, because the used iconCube Version to encode doesn't support to decode at PHP 7.2. The following error is thrown when Enter the WebPage:
+Fatal error: The file /var/www/html/app/app_model.php was encoded by the ionCube Encoder for PHP 5.4 and cannot run under PHP 7.1 or later. Please ask the provider of the script to provide a version encoded with the ionCube Encoder for PHP 7.1. in Unknown on line 0
+
 ## How To Use
 
 * Install [Docker](https://www.docker.com) for your system
