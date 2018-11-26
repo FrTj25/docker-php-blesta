@@ -26,9 +26,9 @@ RUN cd /tmp \
     && unzip -qq blesta-4.4.0.zip \
     && rm blesta-4.4.0.zip \
     && mv uploads /var/www \
-    && mv blesta/* blesta/.h* /var/www/html
-    && mv hotfix-php71/blesta/app/app_controller.php /var/www/html/app/app_controller.php
-    && mv hotfix-php71/blesta/app/app_model.php /var/www/html/app/app_model.php
+    && mv blesta/* blesta/.h* /var/www/html \
+    && mv hotfix-php71/blesta/app/app_controller.php /var/www/html/app/app_controller.php \
+    && mv hotfix-php71/blesta/app/app_model.php /var/www/html/app/app_model.php \
     && mv hotfix-php71/blesta/app/models/license.php /var/www/html/app/models/license.php
 
 RUN chown -R www-data: /var/www/html
