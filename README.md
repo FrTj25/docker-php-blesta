@@ -8,7 +8,8 @@ A Docker for [Blesta](https://www.blesta.com).
 * Namely made changes: Updated downloaded Blesta.ZIP to 4.4.0, image changed to php:7.2-apache, use PHP 7 AddOns (and remove mcrypt) and newer mailparse. Configure PHP7.2 with gmp instead of install via php7.0-gmp
 
 ## Blesta 4.4.0 support PHP 7.2
-**ToDo: Implement Hotfix to run Blesta at PHP7
+**Implemented Hotfix to run Blesta at PHP7.1
+**It's running at PHP 7.2 but should we use php 7.1 with mrcrypt until the official support of 7.2 (with sodium)?
 
 
 ## How To Use
